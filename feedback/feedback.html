@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Spartan" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+   
+    
+    <title>Feedback</title>
+    <style>
+        *{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Spartan',sans-serif;
+  }
+  body{
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:#bce7f5;
+   
+  }
+ .container{
+     width:400px;
+     height:400px;
+     background-color: #ffffff;
+     border:1px solid #f9f9f9;
+     border-radius: 10px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     align-content: center;
+     text-align: center;
+     box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+     position: relative;
+ }
+ .second{
+     position: absolute;
+     display: none;
+   
+ }
+ ul{
+     list-style: none;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+ }
+ li{
+    width: 90px;
+    height: 100px;
+    padding: 10px;
+ }
+ li{
+     transition:box-shadow 0.5s ease-in-out;
+     cursor: pointer;
+     border-radius: 8px;
+   
+ }
+ .fas{
+    font-size: 2.5rem;
+    color: #ffcf3e;
+     
+ }
+ 
+ h5{
+    padding-top: 1rem;
+ }
+ p{
+     font-weight: 500;
+     line-height: 1.8rem;
+ }
+ .fa-heart{
+     font-size: 3rem;
+    color: #ff0303;
+ }
+ li:hover{
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+ }
+ button{
+    width:170px;
+     height:50px;
+     border-radius: 5px;
+     font-size: 16px;
+     font-weight: 500;
+     margin-top: 2rem;
+     background-color: transparent;
+     color:#6a6a6c;
+     border:1px solid #dedede;
+     cursor: pointer;
+     margin: 0 auto;;
+    outline: none;
+ }
+ button:hover{
+    background-color:hsl(154, 61%, 47%);
+    border:1px solid hsl(154, 61%, 47%);
+    color:white;
+    transition: all 0.5s ease;
+    box-shadow:0px 10px 20px -5px rgba(0,0,0,0.3);
+   }
+   
+    </style>
+</head>
+<body>
+   <div class="container" >
+      <p>How satisfied are you with our<br> customer support performance?</p>
+     <ul>
+         <li>
+                <i class="fas fa-grin-beam"></i>
+               <h5 style="padding-top: 0.9rem;">Happy</h5>
+    
+         </li>
+         <li>
+                    <i class="fas fa-meh"></i>
+                    <h5>Satisfied</h5>
+         </li>
+         <li>
+                    <i class="fas fa-angry"></i>
+                    <h5>Angry</h5>
+         </li>
+     </ul>
+              <button type="submit" onclick="show()">Send review</button>
+       
+    
+    
+    </div>
+    <div class="container second" id="hide">
+        <h3>Thank You</h3>
+       <i class="fas fa-heart"></i>
+        <p>We'll use your feedback to improve our customer support performance.</p>
+       
+                <a href="feedback.html"><button type="submit">Done</button></a>
+         
+      
+      
+      </div>
+      <script>
+      const show=()=>{
+             let sh= document.getElementById("hide").style.display="flex";
+      }
+      </script>
+</body>
+</html>
